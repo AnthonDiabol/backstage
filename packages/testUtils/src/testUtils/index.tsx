@@ -14,13 +14,18 @@
  * limitations under the License.
  */
 
-import React, { ComponentType, ReactNode, FunctionComponent } from 'react';
+import React, {
+  ComponentType,
+  ReactNode,
+  FunctionComponent,
+  ReactElement,
+} from 'react';
 import { ThemeProvider } from '@material-ui/core';
 import { act } from 'react-dom/test-utils';
 import { render, RenderResult } from '@testing-library/react';
 import { MemoryRouter } from 'react-router';
 import { Route } from 'react-router-dom';
-import { BackstageTheme, ErrorBoundary } from '@backstage/core';
+import { BackstageTheme } from '@backstage/theme';
 
 export { default as Keyboard } from './Keyboard';
 export { default as mockBreakpoint } from './mockBreakpoint';
@@ -39,9 +44,7 @@ export function wrapInTestApp(
 
   return (
     <MemoryRouter initialEntries={initialRouterEntries}>
-      <ErrorBoundary>
-        <Route component={Wrapper} />
-      </ErrorBoundary>
+      <Route component={Wrapper} />
     </MemoryRouter>
   );
 }
@@ -65,7 +68,9 @@ export const wrapInTheme = (component: ReactNode, theme = BackstageTheme) => (
 // cleaner, since act doesn't return the result of the evaluated function.
 // https://github.com/testing-library/react-testing-library/issues/281
 // https://github.com/facebook/react/pull/14853
-export async function renderWithEffects(nodes): Promise<RenderResult> {
+export async function renderWithEffects(
+  nodes: ReactElement,
+): Promise<RenderResult> {
   let value: RenderResult;
   await act(() => {
     value = render(nodes);

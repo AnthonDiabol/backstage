@@ -1,19 +1,19 @@
-# @backstage/test-utils
+# @backstage/core
 
-This package provides utilities that can be used to test plugins and apps for Backstage.
+This package provides the core API used by Backstage plugins and apps.
 
 ## Installation
 
 Install the package via npm or yarn:
 
 ```sh
-$ npm install --save-dev @backstage/test-utils
+$ npm install --save @backstage/core
 ```
 
 or
 
 ```sh
-$ yarn add -D @backstage/test-utils
+$ yarn add @backstage/core
 ```
 
 ## Documentation
