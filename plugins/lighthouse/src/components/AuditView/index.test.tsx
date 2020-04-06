@@ -13,10 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+describe('AuditView', () => {
+  it.todo('renders the iframe for the selected audit');
+  it.todo('renders a link to create a new audit for this website');
 
-export { default as ApiProvider, useApi } from './ApiProvider';
-export { default as ApiRegistry } from './ApiRegistry';
-export { default as ApiTestRegistry } from './ApiTestRegistry';
-export { default as ApiRef } from './ApiRef';
-export * from './types';
-export * from './definitions';
+  describe('sidebar', () => {
+    it.todo('renders a list of all audits for the website');
+    it.todo('navigates to the next report when an audit is clicked');
+  });
+});
