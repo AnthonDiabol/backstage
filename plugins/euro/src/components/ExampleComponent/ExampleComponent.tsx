@@ -30,7 +30,7 @@ import CurrencyComponent from '../CurrencyComponent';
 
 const ExampleComponent: FC<{}> = () => (
   <Page theme={pageTheme.tool}>
-    <Header title="Welcome to test-plugin!" subtitle="Euro exchange rate">
+    <Header title="Welcome to euro!" subtitle="Euro exchange rate">
       <HeaderLabel label="Owner" value="Team X" />
       <HeaderLabel label="Lifecycle" value="Alpha" />
     </Header>
