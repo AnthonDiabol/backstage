@@ -13,12 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { default as HomePagePlugin } from '@backstage/plugin-home-page';
-import { default as WelcomePlugin } from '@backstage/plugin-welcome';
-export { HomePagePlugin, WelcomePlugin };
-import { default as Euro } from '@backstage/plugin-euro';
-export { Euro };
-import { default as Login } from '@backstage/plugin-login';
-export { Login };
-import { default as Jira } from '@backstage/plugin-jira';
-export { Jira };
+
+import { createStore, Store, Action } from 'redux';
+import changeState from '../Reducers/Reducer';
+
+export const store: Store<any, Action<any>> = createStore(changeState);
+
+export default store;

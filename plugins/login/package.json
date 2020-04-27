@@ -1,5 +1,5 @@
 {
-  "name": "@backstage/plugin-euro",
+  "name": "@backstage/plugin-login",
   "version": "0.1.1-alpha.2",
   "main": "dist/index.cjs.js",
   "types": "dist/index.d.ts",
@@ -29,9 +29,7 @@
     "react-dom": "16.13.1",
     "react-use": "^13.0.0"
   },
-  "dependencies":{
-    "@types/react-redux": "^7.1.7",
-    "react-redux": "^7.2.0",
-    "redux": "^4.0.5"
+  "dependencies": {
+    "@auth0/auth0-spa-js": "^1.7.0"
   }
 }

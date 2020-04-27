@@ -13,12 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { default as HomePagePlugin } from '@backstage/plugin-home-page';
-import { default as WelcomePlugin } from '@backstage/plugin-welcome';
-export { HomePagePlugin, WelcomePlugin };
-import { default as Euro } from '@backstage/plugin-euro';
-export { Euro };
-import { default as Login } from '@backstage/plugin-login';
-export { Login };
-import { default as Jira } from '@backstage/plugin-jira';
-export { Jira };
+
+import { createPlugin } from '@backstage/core';
+import ExampleComponent from './components/ExampleComponent';
+
+export default createPlugin({
+  id: 'login',
+  register({ router }) {
+    router.registerRoute('/login', ExampleComponent);
+  },
+});
