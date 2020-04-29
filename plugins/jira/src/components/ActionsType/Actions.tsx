@@ -13,10 +13,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { default as HomePagePlugin } from '@backstage/plugin-home-page';
-import { default as WelcomePlugin } from '@backstage/plugin-welcome';
-export { HomePagePlugin, WelcomePlugin };
-import { default as Euro } from '@backstage/plugin-euro';
-export { Euro };
-import { default as Jira } from '@backstage/plugin-jira';
-export { Jira };
+
+const addTitle = (input: string) => {
+  return { type: 'ADD_TITLE', text: input };
+};
+const addIssue = (input: {}) => {
+  return { type: 'ADD_ISSUE', object: input };
+};
+const removeIssue = () => {
+  return { type: 'REMOVE_ISSUE' };
+};
+const addProject = (input: {}) => {
+  return { type: 'ADD_PROJECT', object: input };
+};
+const removeProject = () => {
+  return { type: 'REMOVE_PROJECT' };
+};
+
+export default {
+  addTitle,
+  addIssue,
+  removeIssue,
+  addProject,
+  removeProject,
+};

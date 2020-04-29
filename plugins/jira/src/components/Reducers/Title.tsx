@@ -13,10 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { default as HomePagePlugin } from '@backstage/plugin-home-page';
-import { default as WelcomePlugin } from '@backstage/plugin-welcome';
-export { HomePagePlugin, WelcomePlugin };
-import { default as Euro } from '@backstage/plugin-euro';
-export { Euro };
-import { default as Jira } from '@backstage/plugin-jira';
-export { Jira };
+
+type action = {
+  type: string;
+  text: string;
+};
+
+// const initialState={title:"Jira Projects", project:{}, issue:{}};
+
+const title = (state: {} = { title: 'Jira Projects' }, action: action) => {
+  switch (action.type) {
+    case 'ADD_TITLE':
+      return { title: action.text };
+    default:
+      return state;
+  }
+};
+
+export default title;
