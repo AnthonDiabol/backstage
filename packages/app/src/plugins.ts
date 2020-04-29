@@ -18,7 +18,5 @@ import { default as WelcomePlugin } from '@backstage/plugin-welcome';
 export { HomePagePlugin, WelcomePlugin };
 import { default as Euro } from '@backstage/plugin-euro';
 export { Euro };
-import { default as Login } from '@backstage/plugin-login';
-export { Login };
 import { default as Jira } from '@backstage/plugin-jira';
 export { Jira };
