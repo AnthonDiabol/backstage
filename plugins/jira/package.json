@@ -31,6 +31,7 @@
     "react-use": "^13.0.0"
   },
   "dependencies": {
+    "@backstage/core": "^0.1.1-alpha.2",
     "@types/react-redux": "^7.1.7",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5"
