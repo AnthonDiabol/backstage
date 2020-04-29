@@ -17,7 +17,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import mockFetch from 'jest-fetch-mock';
-import ExampleComponent from './JiraComponent';
+import JiraComponent from './JiraComponent';
 import { ThemeProvider } from '@material-ui/core';
 import { BackstageTheme } from '@backstage/core';
 
@@ -26,7 +26,7 @@ describe('JiraComponent', () => {
     mockFetch.mockResponse(() => new Promise(() => {}));
     const rendered = render(
       <ThemeProvider theme={BackstageTheme}>
-        <ExampleComponent />
+        <JiraComponent />
       </ThemeProvider>,
     );
     expect(rendered.getByText('Welcome to jira!')).toBeInTheDocument();
